@@ -5,7 +5,7 @@ This page is list of it related seminars, conferences and other events i partici
 ## Seminars, Conferences
 
  * [International PHP Conference](https://phpconference.com/en/) / [ International JavaScript Conference](https://javascript-conference.com/en/)
-  `Oct 23 – 25, 2017 | Munich, Germany`
+  `October 23 – 25, 2017 | Munich, Germany`
 
 ## Other events
 
