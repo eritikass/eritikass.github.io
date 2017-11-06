@@ -1,6 +1,6 @@
 ```js
 // be nice, say hello to others...
-console.log('hello world :P');
+console.log('hello world');
 ```
 
 Welcome to my simple homepage, not much to see here... 
