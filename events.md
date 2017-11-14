@@ -4,6 +4,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Seminars, Conferences
 
+ * [Cloud OnBoard - Tallinn](https://cloudplatformonline.com/2017-OnBoard-Tallinn.html) `November 14 | Tallinn`
  * [International PHP Conference](https://phpconference.com/en/) / [ International JavaScript Conference](https://javascript-conference.com/en/)
   `October 23 – 25, 2017 | Munich, Germany`
 
