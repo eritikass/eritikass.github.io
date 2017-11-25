@@ -2,6 +2,7 @@
 
 Hackathons i participated:
 
+ * [Junction 2017](https://hackjunction.com/) `November 24-26, 2017 | Helsinki` Tackling the lawyer's time estimation problem.
  * [Garage48 Tech for Humanity](http://garage48.org/events/garage48-tech-for-humanity) `June 9-11, 2017`
    Tackle the refugee resettlement issue (*[more info](https://settlebetter.eu/)*). `2nd spot`
  * [Garage48 Baltic Open & Big Data 2017](http://garage48.org/events/balticopenbigdata2017) `May 19-21, 2017`
