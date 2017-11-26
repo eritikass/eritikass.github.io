@@ -1,1 +1,13 @@
 # Curriculum Vitae
+
+## Work
+ - Ekspress Digital(/Delfi), `November 2007-...`
+ - Spintek OÜ, `September 2006-November 2007`
+
+## Education
+ - _Tallinn University of Technology (ongoing, 2017-...)_
+ - Tallinna Polütehnikum, Arvutid ja arvutivõrgud (2007)
+ - Tudu põhikool (2003)
+
+## Other
+ - [5sec.fm](https://www.5sec.fm/) - Ajujaht 2015-2016, top 30 
