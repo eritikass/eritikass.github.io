@@ -2,6 +2,8 @@
 
 Hackathons i participated:
 
+ * "ED hackathon nr2" `December 7-8, 2017`
+      - Tech mentor 
  * [Junction 2017](https://hackjunction.com/) `November 24-26, 2017 | Helsinki` 
       - Lawyer's time estimation problem (*[more info](https://devpost.com/software/legal-timer)*). `legal tech track: 2nd spot`
  * [Garage48 Tech for Humanity](http://garage48.org/events/garage48-tech-for-humanity) `June 9-11, 2017`
