@@ -10,6 +10,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [Mobile Meetup](https://www.eventbrite.com/e/mobile-meetup-tickets-39863766599#) `December 5, 2017`
  * [Evening with containers and Kubernetes at Telia](https://www.meetup.com/Tallinn-DevOps-Meetup/events/244925512/) `November 28, 2017`
  * [Storytek cybersecurity, data & AI meetup](https://www.facebook.com/events/168507497065367/) `October 27, 2017`
  * [Let's talk about security @ TransferWise](https://www.meetup.com/Tallinn-DevOps-Meetup/events/243957304/) `October 19, 2017`
