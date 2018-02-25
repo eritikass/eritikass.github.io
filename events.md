@@ -4,9 +4,10 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Seminars, Conferences
 
+ * [React Firebase Workshop](https://www.meetup.com/Tallinn-React-Firebase/) `February 19-25, 2018`
  * [Cloud OnBoard](https://cloudplatformonline.com/2017-OnBoard-Tallinn.html) `November 14, 2017`
  * [International PHP Conference](https://phpconference.com/en/) / [ International JavaScript Conference](https://javascript-conference.com/en/)
-  `October 23 – 25, 2017 | Munich, Germany`
+  `October 23–25, 2017 | Munich, Germany`
 
 ## Other events
 
