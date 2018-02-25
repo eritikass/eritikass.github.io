@@ -10,6 +10,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [C&S Future Forum](https://www.instagram.com/p/BeV1QTmHUm4/) `January 23, 2018 | Helsinki`
  * [Docker Meetup @ Pipedrive](https://www.meetup.com/Docker-Tallinn/events/245304903/) `December 23, 2017`
  * [Mobile Meetup](https://www.eventbrite.com/e/mobile-meetup-tickets-39863766599#) `December 5, 2017`
  * [Evening with containers and Kubernetes at Telia](https://www.meetup.com/Tallinn-DevOps-Meetup/events/244925512/) `November 28, 2017`
