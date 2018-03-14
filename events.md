@@ -11,6 +11,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [Let’s speak about cyber security @Pipedrive](https://www.meetup.com/Lets-speak-about-cyber-security/events/247765738/) `March 14, 2018`
  * [Devclub 57](http://devclub.ee/lugu/adcash/devclub-57-adcash-february-27) `February 20, 2018`
  * [C&S Future Forum](https://www.instagram.com/p/BeV1QTmHUm4/) `January 23, 2018 | Helsinki`
  * [Docker Meetup @ Pipedrive](https://www.meetup.com/Docker-Tallinn/events/245304903/) `December 23, 2017`
