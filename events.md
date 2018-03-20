@@ -11,6 +11,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [Devclub 58 @ Von Stackelberg Hotel](http://devclub.ee/lugu/gabriel-schoelander/devclub-58-von-stackelberg-hotel-march-20)
  * [Let’s speak about cyber security @Pipedrive](https://www.meetup.com/Lets-speak-about-cyber-security/events/247765738/) `March 14, 2018`
  * [Devclub 57 @ Adcash](http://devclub.ee/lugu/adcash/devclub-57-adcash-february-27) `February 20, 2018`
  * [C&S Future Forum](https://www.instagram.com/p/BeV1QTmHUm4/) `January 23, 2018 | Helsinki`
