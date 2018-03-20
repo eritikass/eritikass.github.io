@@ -5,7 +5,7 @@
  - Spintek OÜ, `September 2006-November 2007`
 
 ## Education
- - _Tallinn University of Technology (ongoing, 2017-...)_
+ - _Tallinn University of Technology_ / _TTÜ IT Kolledž_ _(both unfinished)_
  - Tallinna Polütehnikum, Arvutid ja arvutivõrgud (2007)
  - Tudu põhikool (2003)
 
