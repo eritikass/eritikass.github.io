@@ -2,6 +2,7 @@
 
 Hackathons i participated:
 
+ * [Garage48 Digital Construction](http://garage48.org/events/garage48-digital-construction) `April 6-8, 2018`
  * "ED hackathon nr2" `December 7-8, 2017`
       - Tech mentor 
  * [Junction 2017](https://hackjunction.com/) `November 24-26, 2017 | Helsinki` 
