@@ -12,6 +12,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [Twilio special – immutable instances, separating legacy code and more](https://www.meetup.com/Tallinn-DevOps-Meetup/events/249149862/) `April 10, 2018`
  * [Docker Birthday #5 @Tallinn, lets join and celebrate](https://www.meetup.com/Docker-Tallinn/events/248330992/) `March 22, 2018`
  * [Devclub 58 @ Von Stackelberg Hotel](http://devclub.ee/lugu/gabriel-schoelander/devclub-58-von-stackelberg-hotel-march-20) `March 20, 2018`
  * [Let’s speak about cyber security @Pipedrive](https://www.meetup.com/Lets-speak-about-cyber-security/events/247765738/) `March 14, 2018`
