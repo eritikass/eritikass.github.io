@@ -1,7 +1,7 @@
 # Curriculum Vitae
 
 ## Work
- - Tallinna Polütehnikum _(teaching automated testing)_, `2008-...`
+ - Tallinna Polütehnikum _(teaching automated testing)_, `2018-...`
  - Ekspress Digital(/Delfi), `November 2007-...`
  - Spintek OÜ, `September 2006-November 2007`
 
