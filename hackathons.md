@@ -2,6 +2,8 @@
 
 Hackathons i participated:
 
+ * [Garage48 Cyber Security](http://garage48.org/events/cyber-security-hackathon) `April 20-22, 2018`
+      - Creating GitHub bot to automate changelog generation and updating. `Team lead`
  * [Garage48 Digital Construction](http://garage48.org/events/garage48-digital-construction) `April 6-8, 2018`
       - Simplifying parametric design: [Runner up and Favorite of the Audience](https://twitter.com/garage48/status/983022653387702273)
  * "ED hackathon nr2" `December 7-8, 2017`
