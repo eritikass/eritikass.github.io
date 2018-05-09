@@ -12,6 +12,7 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Other events
 
+ * [YDT: Learn how to design better services/products with user testing](https://www.eventbrite.com/e/ydt-learn-how-to-design-better-servicesproducts-with-user-testing-tickets-45291018656#) `May 3, 2018`
  * [Twilio special – immutable instances, separating legacy code and more](https://www.meetup.com/Tallinn-DevOps-Meetup/events/249149862/) `April 10, 2018`
  * [Docker Birthday #5 @Tallinn, lets join and celebrate](https://www.meetup.com/Docker-Tallinn/events/248330992/) `March 22, 2018`
  * [Devclub 58 @ Von Stackelberg Hotel](http://devclub.ee/lugu/gabriel-schoelander/devclub-58-von-stackelberg-hotel-march-20) `March 20, 2018`
