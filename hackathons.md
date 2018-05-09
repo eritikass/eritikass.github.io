@@ -2,6 +2,7 @@
 
 Hackathons i participated:
 
+ * [Garage48 Wellbeing Vol 2 Work Ability](http://garage48.org/events/garage48-estonian-wellbeing-2018) `May 4-5, 2018`
  * [Garage48 Cyber Security](http://garage48.org/events/cyber-security-hackathon) `April 20-22, 2018`
       - Creating GitHub bot to automate changelog generation and updating. `Team lead`
  * [Garage48 Digital Construction](http://garage48.org/events/garage48-digital-construction) `April 6-8, 2018`
