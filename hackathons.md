@@ -2,6 +2,8 @@
 
 Hackathons i participated:
 
+ * [TransferWise Hackathon 2019](https://www.facebook.com/events/329284214585465/), `March 29-30, 2019`
+      - [VERK](https://gamithra.com/verk) - platform to find a handyman `3rd place`
  * [Garage48 Future of Mobility](http://garage48.org/events/garage48-future-of-mobility) `February 19-21, 2019 | Riga`
       - [Starship](https://www.starship.xyz) team
  * "ED hackathon nr3" `Januar 2-3, 2019`
