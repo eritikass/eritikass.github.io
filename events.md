@@ -16,9 +16,14 @@ This page is list of it related seminars, conferences and other events i partici
  * [International PHP Conference](https://phpconference.com/en/) / [ International JavaScript Conference](https://javascript-conference.com/en/)
   `October 23–25, 2017 | Munich, Germany`
 
-## Other events
+## Other events (presenter)
 
- * *...*
+ * [Pipedrive & Docker meetup: How do you #Docker?](https://www.meetup.com/pipedrive-meetups-tallinn/events/259666658/) `March 20, 2019`
+    - [GitLab CI in action](https://docs.google.com/presentation/d/1Bcg72ZgmTaaMxV8qT7ixru5tW-fWE8-7uSSTMkw28-4)
+
+## Other events (particant)
+
+ * *... sorry no newer info available...*
  * [YDT: Learn how to design better services/products with user testing](https://www.eventbrite.com/e/ydt-learn-how-to-design-better-servicesproducts-with-user-testing-tickets-45291018656#) `May 3, 2018`
  * [Twilio special – immutable instances, separating legacy code and more](https://www.meetup.com/Tallinn-DevOps-Meetup/events/249149862/) `April 10, 2018`
  * [Docker Birthday #5 @Tallinn, lets join and celebrate](https://www.meetup.com/Docker-Tallinn/events/248330992/) `March 22, 2018`
