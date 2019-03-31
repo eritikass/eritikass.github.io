@@ -2,7 +2,7 @@
 
 ## Work
  - Tallinna Polütehnikum _(teaching automated testing)_, `2018-...`
- - Ekspress Digital(/Delfi), `November 2007-...`
+ - Ekspress Digital(/Delfi), `November 2007-2019`
  - Spintek OÜ, `September 2006-November 2007`
 
 ## Education
