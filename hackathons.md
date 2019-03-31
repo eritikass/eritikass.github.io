@@ -7,7 +7,7 @@ Hackathons i participated:
  * [Garage48 Future of Mobility](http://garage48.org/events/garage48-future-of-mobility) `February 19-21, 2019 | Riga`
       - [Starship](https://www.starship.xyz) team
  * "ED hackathon nr3" `Januar 2-3, 2019`
-      - Whack-a-pod
+      - Whack-a-pod  (/organizer)
  * [Garage48 Wellbeing Vol 2 Work Ability](http://garage48.org/events/garage48-estonian-wellbeing-2018) `May 4-5, 2018`
  * [Garage48 Cyber Security](http://garage48.org/events/cyber-security-hackathon) `April 20-22, 2018`
       - Creating GitHub bot to automate changelog generation and updating. `Team lead`
