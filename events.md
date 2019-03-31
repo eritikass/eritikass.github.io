@@ -4,6 +4,12 @@ This page is list of it related seminars, conferences and other events i partici
 
 ## Seminars, Conferences
 
+ * [North Star AI](https://aiconf.tech/) `March 7, 2019`
+ * [TechChill](https://www.techchill.co/) `February 21, 2019 | Riga`
+ * [Slush](https://www.slush.org/) `December 4-5, 2018 | Helsinki`
+ * [Refresh](http://refresh.rocks/) `September 7, 2018`
+ * [Latitude59](https://latitude59.ee/) `May 24-25, 2018`
+ * [DevOps Tallinn 2018](https://www.eventbrite.com/e/devops-tallinn-2018-tickets-43697995882#) `May 17, 2018`
  * [React Firebase Workshop](https://www.meetup.com/Tallinn-React-Firebase/) `February 19-25, 2018`
  * [C&S Future Forum](https://www.instagram.com/p/BeV1QTmHUm4/) `January 23, 2018 | Helsinki`
  * [Cloud OnBoard](https://cloudplatformonline.com/2017-OnBoard-Tallinn.html) `November 14, 2017`
