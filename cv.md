@@ -1,9 +1,9 @@
 # Curriculum Vitae
 
 ## Work
- - Veriff, `2019-...`
+ - Veriff, `April 2019-...`
  - Tallinna Polütehnikum _(teaching automated testing)_, `2018-...`
- - Ekspress Digital(/Delfi), `November 2007-2019`
+ - Ekspress Digital(/Delfi), `November 2007-2019 April`
  - Spintek OÜ, `September 2006-November 2007`
 
 ## Education
