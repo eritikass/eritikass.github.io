@@ -2,6 +2,13 @@
 
 This page is list of it related seminars, conferences and other events i participated.
 
+## As presenter
+
+ * [Pipedrive & Docker meetup: How do you #Docker?](https://www.meetup.com/pipedrive-meetups-tallinn/events/259666658/) `March 20, 2019`
+    - [GitLab CI in action](https://docs.google.com/presentation/d/1Bcg72ZgmTaaMxV8qT7ixru5tW-fWE8-7uSSTMkw28-4)
+ * [Let's talk about Kubernetes and CI/CD at Veriff](https://www.meetup.com/Tallinn-DevOps-Meetup/events/264038620/) `August 29, 2019`
+    - _How we deploy software at Veriff_
+
 ## Seminars, Conferences
 
  * [North Star AI](https://aiconf.tech/) `March 7, 2019`
@@ -16,10 +23,6 @@ This page is list of it related seminars, conferences and other events i partici
  * [International PHP Conference](https://phpconference.com/en/) / [ International JavaScript Conference](https://javascript-conference.com/en/)
   `October 23–25, 2017 | Munich, Germany`
 
-## Other events (presenter)
-
- * [Pipedrive & Docker meetup: How do you #Docker?](https://www.meetup.com/pipedrive-meetups-tallinn/events/259666658/) `March 20, 2019`
-    - [GitLab CI in action](https://docs.google.com/presentation/d/1Bcg72ZgmTaaMxV8qT7ixru5tW-fWE8-7uSSTMkw28-4)
 
 ## Other events (particant)
 
