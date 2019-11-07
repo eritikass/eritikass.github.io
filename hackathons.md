@@ -2,6 +2,8 @@
 
 Hackathons i participated:
 
+ * [Digital Innovation Days Hackathon](https://www.facebook.com/events/322816275287950/), `November 05-07, 2019`
+      - [pagerr](https://pagerr.net/) - print on unused areas 
  * [TransferWise Hackathon 2019](https://www.facebook.com/events/329284214585465/), `March 29-30, 2019`
       - [VERK](https://gamithra.com/verk) - platform to find a handyman `3rd place`
  * [Garage48 Future of Mobility](http://garage48.org/events/garage48-future-of-mobility) `February 19-21, 2019 | Riga`
