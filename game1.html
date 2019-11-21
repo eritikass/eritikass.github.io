@@ -1,0 +1,163 @@
+
+<html>
+  <head>
+    <title>game-1</title>
+    <script>
+      let turn = "";
+      let initHtml = "";
+      function clickBox(id) {
+        const victory = document.getElementById("victory");
+        if (victory.style.display === "block") {
+          return;
+        }
+
+        const box = document.getElementById("box" + id);
+        if (box.className !== "") {
+          alert("box already used");
+          return;
+        }
+        box.classList.add(turn);
+        if (checkWin(turn)) {
+          victory.classList.add(turn);
+          victory.innerHTML = turn.toUpperCase() + "  VICTORY!!!";
+          victory.style.display = "block";
+          document.getElementById("next-turn").style.display = "none";
+          document.getElementById("restart-game").style.display = "block";
+          return;
+        }
+        if (isDraw()) {
+          victory.innerHTML = "DRAW";
+          victory.style.color = "black";
+          victory.style.display = "block";
+          document.getElementById("next-turn").style.display = "none";
+          document.getElementById("restart-game").style.display = "block";
+          return;
+        }
+
+        turn = turn === "red" ? "green" : "red";
+        setNextTurnStatus();
+      }
+
+      function restartGame() {
+        turn = Math.random() > 0.5 ? "red" : "green";
+        document.body.innerHTML = initHtml;
+        setNextTurnStatus();
+      }
+
+      function setNextTurnStatus() {
+        const nextTurn = document.getElementById("next-turn");
+        nextTurn.innerHTML = "NEXT TURN: " + turn.toUpperCase();
+        nextTurn.classList.remove("red");
+        nextTurn.classList.remove("green");
+        nextTurn.classList.add(turn);
+      }
+
+      function checkWin(color) {
+        /*
+1 2 3
+4 5 6
+7 8 9
+      */
+        return (
+          // -->
+          match(color, 1, 2, 3) ||
+          match(color, 4, 5, 6) ||
+          match(color, 7, 8, 9) ||
+          // ↓
+          match(color, 1, 4, 7) ||
+          match(color, 2, 5, 8) ||
+          match(color, 3, 6, 9) ||
+          // x
+          match(color, 1, 5, 9) ||
+          match(color, 3, 5, 7)
+        );
+      }
+      function isDraw() {
+        return (
+          isUsed(1) &&
+          isUsed(2) &&
+          isUsed(3) &&
+          isUsed(4) &&
+          isUsed(5) &&
+          isUsed(6) &&
+          isUsed(7) &&
+          isUsed(8) &&
+          isUsed(9)
+        );
+      }
+      function isUsed(id) {
+        const box = document.getElementById("box" + id);
+        return box.classList.contains("red") || box.classList.contains("green");
+      }
+      function match(color, p1, p2, p3) {
+        return (
+          document.getElementById("box" + p1).classList.contains(color) &&
+          document.getElementById("box" + p2).classList.contains(color) &&
+          document.getElementById("box" + p3).classList.contains(color)
+        );
+      }
+      window.addEventListener("DOMContentLoaded", event => {
+        initHtml = document.body.innerHTML;
+        restartGame();
+      });
+    </script>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      td {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+      }
+      .red {
+        background-color: red;
+      }
+      .green {
+        background-color: green;
+      }
+      .msg-box {
+        width: 280;
+        margin: 20px;
+        font-weight: bold;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        font-size: 20px;
+        text-align: center;
+      }
+      div.msg-box {
+        border: 1px solid black;
+        color: white;
+      }
+      #victory,
+      #restart-game {
+        display: none;
+      }
+    </style>
+  </head>
+  <div class="msg-box" id="next-turn">NEXT TURN: XXX</div>
+  <div class="msg-box" id="victory">XXX VICTORY!!!</div>
+  <body>
+    <table>
+      <tr>
+        <td onclick="clickBox(1)" id="box1"></td>
+        <td onclick="clickBox(2)" id="box2"></td>
+        <td onclick="clickBox(3)" id="box3"></td>
+      </tr>
+      <tr>
+        <td onclick="clickBox(4)" id="box4"></td>
+        <td onclick="clickBox(5)" id="box5"></td>
+        <td onclick="clickBox(6)" id="box6"></td>
+      </tr>
+      <tr>
+        <td onclick="clickBox(7)" id="box7"></td>
+        <td onclick="clickBox(8)" id="box8"></td>
+        <td onclick="clickBox(9)" id="box9"></td>
+      </tr>
+    </table>
+
+    <button class="msg-box" onclick="restartGame()" id="restart-game">
+      RESTART GAME
+    </button>
+  </body>
+</html>
