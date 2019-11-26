@@ -74,6 +74,7 @@
         boxes.style.height = fieldSize * 50 + "px";
 
         let data = {
+          score: 0,
           error: null,
           // target
           target: null,
@@ -114,6 +115,8 @@
             color,
             id: `snake${data.snake.length + 1}`
           });
+
+          data.score = data.score + 100;
         }
         function addTarget() {
           const lastPiece = data.snake[data.snake.length - 1];
