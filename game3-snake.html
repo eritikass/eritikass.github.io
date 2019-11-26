@@ -74,6 +74,7 @@
         boxes.style.height = fieldSize * 50 + "px";
 
         let data = {
+          error: null,
           // target
           target: null,
           // direction
@@ -143,6 +144,8 @@
   w
 a s d
             
+---------------
+
 ` + JSON.stringify(data, null, 4);
         }
         showDataDebug();
@@ -173,13 +176,9 @@ a s d
           showDataDebug();
         });
 
-        function showMover() {
-          // show update debug data
-          showDataDebug();
-        }
-        showMover();
+        showDataDebug();
 
-        setInterval(() => {
+        const intervalId = setInterval(() => {
           const maxSize = fieldSize * boxSize - snakeSize;
 
           const [topPosOld] = data.snakePos;
@@ -231,9 +230,9 @@ a s d
               data.target = null;
             }
           } else {
-              if (Math.floor(Math.random() * 10) === 3) {
-                  addTarget();
-              }
+            if (Math.floor(Math.random() * 10) === 3) {
+              addTarget();
+            }
           }
 
           data.snakePos = [topPos]
@@ -259,7 +258,24 @@ a s d
             }
           });
 
-          showMover();
+          showDataDebug();
+
+          const hitPoint = data.snakePos.find((p, i) => {
+            if (i === 0) {
+              return false;
+            }
+            return p.left === topPos.left && p.top === topPos.top;
+          });
+          if (hitPoint) {
+            clearInterval(intervalId);
+            data.error = {
+              hitPoint,
+              topPos,
+              msg: "snake hit hit himself!!!"
+            };
+            showDataDebug();
+            alert(`ERROR\n${data.error.msg}`);
+          }
         }, INTERVAL);
       });
     </script>
