@@ -1,0 +1,136 @@
+<html>
+  <head>
+    <title>game2</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box {
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid black;
+      }
+      div#mover {
+        position: absolute;
+        background-color: green;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        left: 0px;
+        display: none;
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", event => {
+        const STEP = 5;
+        const INTERVAL = 50;
+
+        const fieldSize = 12;
+        const boxSize = 50;
+        const moverSize = 20;
+
+        // const table = document.getElementById("table1");
+        const boxes = document.getElementById("boxes");
+        for (let i = 0; i < fieldSize; i++) {
+          for (let j = 0; j < fieldSize; j++) {
+            const box = document.createElement("div");
+            box.classList.add("box");
+            box.classList.add("box_col" + j);
+            box.classList.add("box_row" + i);
+            box.style.top = i * boxSize + "px";
+            box.style.left = j * boxSize + "px";
+            boxes.appendChild(box);
+          }
+        }
+        boxes.style.height = fieldSize * 50 + "px";
+
+        let data = {
+          ArrowRight: false,
+          ArrowLeft: false,
+          ArrowUp: false,
+          ArrowDown: false,
+          left: (fieldSize * boxSize - moverSize) / 2,
+          top: (fieldSize * boxSize - moverSize) / 2,
+        };
+        function showDataDebug() {
+          document.getElementById("datadebug").innerHTML = JSON.stringify(
+            data,
+            null,
+            4
+          );
+        }
+        showDataDebug();
+        window.addEventListener("keydown", function(event) {
+          const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+          if (data[key] !== undefined) {
+            data[key] = true;
+          }
+          showDataDebug();
+        });
+        window.addEventListener("keyup", function(event) {
+          const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+          if (data[key] !== undefined) {
+            data[key] = false;
+          }
+          showDataDebug();
+        });
+
+        function showMover() {
+          const mover = document.getElementById("mover");
+
+          // validate pos
+          if (data.left < 0) {
+            data.left = 0;
+          }
+          const maxLeft = fieldSize * boxSize - moverSize;
+          if (data.left > maxLeft) {
+            data.left = maxLeft;
+          }
+          if (data.top < 0) {
+            data.top = 0;
+          }
+          const maxTop = fieldSize * boxSize - moverSize;
+          if (data.top > maxTop) {
+            data.top = maxTop;
+          }
+
+          // update pos
+          mover.style.left = data.left + "px";
+          mover.style.top = data.top + "px";
+          mover.style.display = "block";
+
+          // show update debug data
+          showDataDebug();
+        }
+        showMover();
+
+        setInterval(() => {
+          if (data.ArrowDown) {
+            data.top = data.top + STEP;
+          }
+          if (data.ArrowUp) {
+            data.top = data.top - STEP;
+          }
+          if (data.ArrowLeft) {
+            data.left = data.left - STEP;
+          }
+          if (data.ArrowRight) {
+            data.left = data.left + STEP;
+          }
+
+          showMover();
+        }, INTERVAL);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="boxes"></div>
+    <div id="mover"></div>
+    <pre id="datadebug"></pre>
+  </body>
+</html>
