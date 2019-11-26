@@ -7,8 +7,8 @@
       }
       .box {
         position: absolute;
-        width: 49px;
-        height: 49px;
+        width: 19px;
+        height: 19px;
         padding: 0;
         margin: 0;
         border-collapse: collapse;
@@ -17,7 +17,7 @@
       }
       .snake {
         position: absolute;
-        background-color: green;
+        background-color: pink;
         width: 20px;
         height: 20px;
         top: 0px;
@@ -26,19 +26,38 @@
         border: none;
         padding: 0;
         margin: 0;
+        z-index: 50;
+      }
+
+      #target {
+        position: absolute;
+        background-color: red;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        left: 0px;
+        display: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+        z-index: 5000;
       }
     </style>
     <script>
       window.addEventListener("DOMContentLoaded", event => {
-        const fieldSize = 12;
-        const boxSize = 50;
-        const snakeSize = 20;
+        const fieldSize = 30;
+        const boxSize = 20;
+        const snakeSize = boxSize;
 
         const STEP = snakeSize;
         const INTERVAL = 150;
 
+        const targetLifetimeSteps = 100;
+
         // const table = document.getElementById("table1");
         const boxes = document.getElementById("boxes");
+        const target = document.getElementById("target");
+
         for (let i = 0; i < fieldSize; i++) {
           for (let j = 0; j < fieldSize; j++) {
             const box = document.createElement("div");
@@ -47,17 +66,16 @@
             box.classList.add("box_row" + i);
             box.style.top = i * boxSize + "px";
             box.style.left = j * boxSize + "px";
+            box.style.width = boxSize + "px";
+            box.style.height = boxSize + "px";
             boxes.appendChild(box);
           }
         }
         boxes.style.height = fieldSize * 50 + "px";
 
         let data = {
-          // arrows
-          ArrowRight: false,
-          ArrowLeft: false,
-          ArrowUp: false,
-          ArrowDown: false,
+          // target
+          target: null,
           // direction
           direction: "left",
           // snake
@@ -70,58 +88,80 @@
           snake: [
             {
               id: "snake1",
-              color: "green",
-            },
-          ],
+              color: "green"
+            }
+          ]
         };
         function getRandomColor() {
-            const colors = [
-                'green',
-                'red',
-                'blue',
-                'orange',
-                'purple'
-            ];
-            return colors[Math.floor(Math.random() * colors.length)];
+          const colors = [
+            //   "green",
+            "red",
+            "blue",
+            "orange",
+            "purple",
+            "yellow"
+          ];
+          return colors[Math.floor(Math.random() * colors.length)];
         }
-        function addSnakePiece() {
-            const lastPiece = data.snake[data.snake.length - 1];
-            let color = getRandomColor();
-            do {
-                color = getRandomColor();
-            } while (color === lastPiece.color)
-            data.snake.push({
-                color,
-                id: `snake${data.snake.length + 1}`,
-            });
+        function addSnakePiece(color) {
+          const lastPiece = data.snake[data.snake.length - 1];
+          // let color = getRandomColor();
+          // do {
+          //     color = getRandomColor();
+          // } while (color === lastPiece.color)
+          data.snake.push({
+            color,
+            id: `snake${data.snake.length + 1}`
+          });
+        }
+        function addTarget() {
+          const lastPiece = data.snake[data.snake.length - 1];
+          let color = getRandomColor();
+          do {
+            color = getRandomColor();
+          } while (color === lastPiece.color);
+
+          data.target = {
+            color,
+            left: Math.floor(Math.random() * fieldSize) * boxSize,
+            top: Math.floor(Math.random() * fieldSize) * boxSize,
+            expires: targetLifetimeSteps * INTERVAL
+          };
+          target.style.top = data.target.top + "px";
+          target.style.left = data.target.left + "px";
+          target.style.backgroundColor = color;
+
+          target.style.display = "block";
         }
         function showDataDebug() {
           const datadebug = document.getElementById("datadebug");
           datadebug.style.position = "absolute";
           datadebug.style.top = "0px";
           datadebug.style.left = fieldSize * boxSize + 10 + "px";
-          datadebug.innerHTML = "press 'q' to make snake longer\n\n" + JSON.stringify(data, null, 4);
+          datadebug.innerHTML =
+            `controls:
+  w
+a s d
+            
+` + JSON.stringify(data, null, 4);
         }
         showDataDebug();
         window.addEventListener("keydown", function(event) {
           const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
-          if (data[key] !== undefined) {
-            data[key] = true;
-          }
-          if (key === "ArrowLeft") {
+          if (key === "a") {
             data.direction = "left";
           }
-          if (key === "ArrowRight") {
+          if (key === "d") {
             data.direction = "right";
           }
-          if (key === "ArrowUp") {
+          if (key === "w") {
             data.direction = "up";
           }
-          if (key === "ArrowDown") {
+          if (key === "s") {
             data.direction = "down";
           }
-          if (key === 'q') {
-              addSnakePiece();
+          if (key === "q") {
+            addTarget();
           }
           showDataDebug();
         });
@@ -144,9 +184,9 @@
 
           const [topPosOld] = data.snakePos;
           const topPos = {
-              left: topPosOld.left,
-              top: topPosOld.top,
-          }
+            left: topPosOld.left,
+            top: topPosOld.top
+          };
           if (data.direction === "down") {
             topPos.top = topPos.top + STEP;
           }
@@ -174,6 +214,28 @@
             topPos.top = 0;
           }
 
+          if (
+            data.target &&
+            data.target.left === topPosOld.left &&
+            data.target.top === topPosOld.top
+          ) {
+            target.style.display = "none";
+            addSnakePiece(data.target.color);
+            data.target = null;
+          }
+
+          if (data.target) {
+            data.target.expires = data.target.expires - INTERVAL;
+            if (data.target.expires <= 0) {
+              target.style.display = "none";
+              data.target = null;
+            }
+          } else {
+              if (Math.floor(Math.random() * 10) === 3) {
+                  addTarget();
+              }
+          }
+
           data.snakePos = [topPos]
             .concat(data.snakePos)
             .slice(0, data.snake.length);
@@ -181,11 +243,11 @@
           data.snake.forEach((s, i) => {
             let e = document.getElementById(s.id);
             if (!e) {
-                e = document.createElement('div');
-                e.classList.add('snake');
-                e.setAttribute('id', s.id);
-                e.style.backgroundColor = s.color;
-                document.body.appendChild(e);
+              e = document.createElement("div");
+              e.classList.add("snake");
+              e.setAttribute("id", s.id);
+              e.style.backgroundColor = s.color;
+              document.body.appendChild(e);
             }
             const pos = data.snakePos[i];
             if (pos) {
@@ -204,6 +266,7 @@
   </head>
   <body>
     <div id="boxes"></div>
+    <div id="target"></div>
     <pre id="datadebug"></pre>
   </body>
 </html>
