@@ -1,0 +1,209 @@
+<html>
+  <head>
+    <title>game2</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .box {
+        position: absolute;
+        width: 49px;
+        height: 49px;
+        padding: 0;
+        margin: 0;
+        border-collapse: collapse;
+        background-color: white;
+        border: 1px solid black;
+      }
+      .snake {
+        position: absolute;
+        background-color: green;
+        width: 20px;
+        height: 20px;
+        top: 0px;
+        left: 0px;
+        display: none;
+        border: none;
+        padding: 0;
+        margin: 0;
+      }
+    </style>
+    <script>
+      window.addEventListener("DOMContentLoaded", event => {
+        const fieldSize = 12;
+        const boxSize = 50;
+        const snakeSize = 20;
+
+        const STEP = snakeSize;
+        const INTERVAL = 150;
+
+        // const table = document.getElementById("table1");
+        const boxes = document.getElementById("boxes");
+        for (let i = 0; i < fieldSize; i++) {
+          for (let j = 0; j < fieldSize; j++) {
+            const box = document.createElement("div");
+            box.classList.add("box");
+            box.classList.add("box_col" + j);
+            box.classList.add("box_row" + i);
+            box.style.top = i * boxSize + "px";
+            box.style.left = j * boxSize + "px";
+            boxes.appendChild(box);
+          }
+        }
+        boxes.style.height = fieldSize * 50 + "px";
+
+        let data = {
+          // arrows
+          ArrowRight: false,
+          ArrowLeft: false,
+          ArrowUp: false,
+          ArrowDown: false,
+          // direction
+          direction: "left",
+          // snake
+          snakePos: [
+            {
+              top: snakeSize * 3,
+              left: snakeSize * 3
+            }
+          ],
+          snake: [
+            {
+              id: "snake1",
+              color: "green",
+            },
+          ],
+        };
+        function getRandomColor() {
+            const colors = [
+                'green',
+                'red',
+                'blue',
+                'orange',
+                'purple'
+            ];
+            return colors[Math.floor(Math.random() * colors.length)];
+        }
+        function addSnakePiece() {
+            const lastPiece = data.snake[data.snake.length - 1];
+            let color = getRandomColor();
+            do {
+                color = getRandomColor();
+            } while (color === lastPiece.color)
+            data.snake.push({
+                color,
+                id: `snake${data.snake.length + 1}`,
+            });
+        }
+        function showDataDebug() {
+          const datadebug = document.getElementById("datadebug");
+          datadebug.style.position = "absolute";
+          datadebug.style.top = "0px";
+          datadebug.style.left = fieldSize * boxSize + 10 + "px";
+          datadebug.innerHTML = "press 'q' to make snake longer\n\n" + JSON.stringify(data, null, 4);
+        }
+        showDataDebug();
+        window.addEventListener("keydown", function(event) {
+          const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+          if (data[key] !== undefined) {
+            data[key] = true;
+          }
+          if (key === "ArrowLeft") {
+            data.direction = "left";
+          }
+          if (key === "ArrowRight") {
+            data.direction = "right";
+          }
+          if (key === "ArrowUp") {
+            data.direction = "up";
+          }
+          if (key === "ArrowDown") {
+            data.direction = "down";
+          }
+          if (key === 'q') {
+              addSnakePiece();
+          }
+          showDataDebug();
+        });
+        window.addEventListener("keyup", function(event) {
+          const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+          if (data[key] !== undefined) {
+            data[key] = false;
+          }
+          showDataDebug();
+        });
+
+        function showMover() {
+          // show update debug data
+          showDataDebug();
+        }
+        showMover();
+
+        setInterval(() => {
+          const maxSize = fieldSize * boxSize - snakeSize;
+
+          const [topPosOld] = data.snakePos;
+          const topPos = {
+              left: topPosOld.left,
+              top: topPosOld.top,
+          }
+          if (data.direction === "down") {
+            topPos.top = topPos.top + STEP;
+          }
+          if (data.direction === "up") {
+            topPos.top = topPos.top - STEP;
+          }
+          if (data.direction === "left") {
+            topPos.left = topPos.left - STEP;
+          }
+          if (data.direction === "right") {
+            topPos.left = topPos.left + STEP;
+          }
+
+          if (topPos.left < 0) {
+            topPos.left = maxSize;
+          }
+          if (topPos.left > maxSize) {
+            topPos.left = 0;
+          }
+
+          if (topPos.top < 0) {
+            topPos.top = maxSize;
+          }
+          if (topPos.top > maxSize) {
+            topPos.top = 0;
+          }
+
+          data.snakePos = [topPos]
+            .concat(data.snakePos)
+            .slice(0, data.snake.length);
+
+          data.snake.forEach((s, i) => {
+            let e = document.getElementById(s.id);
+            if (!e) {
+                e = document.createElement('div');
+                e.classList.add('snake');
+                e.setAttribute('id', s.id);
+                e.style.backgroundColor = s.color;
+                document.body.appendChild(e);
+            }
+            const pos = data.snakePos[i];
+            if (pos) {
+              e.style.left = pos.left + "px";
+              e.style.top = pos.top + "px";
+              e.style.display = "block";
+            } else {
+              e.style.display = "none";
+            }
+          });
+
+          showMover();
+        }, INTERVAL);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="boxes"></div>
+    <pre id="datadebug"></pre>
+  </body>
+</html>
