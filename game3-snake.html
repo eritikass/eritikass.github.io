@@ -74,7 +74,11 @@
         boxes.style.height = fieldSize * 50 + "px";
 
         let data = {
-          score: 0,
+          score: {
+              targets: 0,
+              time: 0,
+              total: 0,
+          },
           error: null,
           // target
           target: null,
@@ -106,7 +110,7 @@
             "pink",
             "Grey",
             "Teal",
-            "Sienna",
+            "Sienna"
           ];
           return colors[Math.floor(Math.random() * colors.length)];
         }
@@ -121,7 +125,17 @@
             id: `snake${data.snake.length + 1}`
           });
 
-          data.score = data.score + 100;
+          if (data.snakePos.length > fieldSize) {
+            // add extra points, as no idle play anymore
+            data.score.targets = data.score.targets + 300;
+          } else if (data.snakePos.length > (fieldSize * 5)) {
+            // more advanced level :P
+            data.score.targets = data.score.targets + 1000;
+          } else {
+            data.score.targets = data.score.targets + 100;
+          }
+
+          data.score.total = data.score.targets + data.score.time;
         }
         function addTarget() {
           const lastPiece = data.snake[data.snake.length - 1];
@@ -173,6 +187,9 @@ a s d
           }
           if (key === "q") {
             addTarget();
+          }
+          if (key === "x") {
+            addSnakePiece('black');
           }
           showDataDebug();
         });
@@ -284,6 +301,15 @@ a s d
             showDataDebug();
             alert(`ERROR\n${data.error.msg}`);
           }
+
+          if (data.snakePos.length > fieldSize) {
+            const timeScore = data.score.time + 1;
+            data.score.time = Math.min(Math.floor(data.score.targets/2), timeScore);
+          } else {
+            const timeScore = data.score.time + 1;
+            data.score.time = Math.min(Math.floor(data.score.targets/10), timeScore);
+          }
+          data.score.total = data.score.targets + data.score.time;
         }, INTERVAL);
       });
     </script>
