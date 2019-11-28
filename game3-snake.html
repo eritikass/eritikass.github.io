@@ -14,6 +14,7 @@
         border-collapse: collapse;
         background-color: white;
         border: 1px dotted gray;
+        border-radius: 12px;
       }
       .snake {
         position: absolute;
@@ -27,6 +28,7 @@
         padding: 0;
         margin: 0;
         z-index: 50;
+        border-radius: 7px;
       }
 
       #target {
@@ -41,6 +43,7 @@
         padding: 0;
         margin: 0;
         z-index: 5000;
+        border-radius: 15px;
       }
     </style>
     <script>
@@ -75,9 +78,9 @@
 
         let data = {
           score: {
-              targets: 0,
-              time: 0,
-              total: 0,
+            targets: 0,
+            time: 0,
+            total: 0
           },
           error: null,
           // target
@@ -128,7 +131,7 @@
           if (data.snakePos.length > fieldSize) {
             // add extra points, as no idle play anymore
             data.score.targets = data.score.targets + 300;
-          } else if (data.snakePos.length > (fieldSize * 5)) {
+          } else if (data.snakePos.length > fieldSize * 5) {
             // more advanced level :P
             data.score.targets = data.score.targets + 1000;
           } else {
@@ -175,21 +178,17 @@ a s d
           const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
           if (key === "a") {
             data.direction = "left";
-          }
-          if (key === "d") {
+          } else if (key === "d") {
             data.direction = "right";
-          }
-          if (key === "w") {
+          } else if (key === "w") {
             data.direction = "up";
-          }
-          if (key === "s") {
+          } else if (key === "s") {
             data.direction = "down";
-          }
-          if (key === "q") {
+          } else if (key === "q") {
             addTarget();
           }
           if (key === "x") {
-            addSnakePiece('black');
+            addSnakePiece("black");
           }
           showDataDebug();
         });
@@ -304,10 +303,16 @@ a s d
 
           if (data.snakePos.length > fieldSize) {
             const timeScore = data.score.time + 1;
-            data.score.time = Math.min(Math.floor(data.score.targets/2), timeScore);
+            data.score.time = Math.min(
+              Math.floor(data.score.targets / 2),
+              timeScore
+            );
           } else {
             const timeScore = data.score.time + 1;
-            data.score.time = Math.min(Math.floor(data.score.targets/10), timeScore);
+            data.score.time = Math.min(
+              Math.floor(data.score.targets / 10),
+              timeScore
+            );
           }
           data.score.total = data.score.targets + data.score.time;
         }, INTERVAL);
