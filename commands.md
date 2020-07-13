@@ -14,3 +14,11 @@ sudo tcpdump -n -i eth0 -p -s 0 port 5672
 # listen by protocol 
 sudo tcpdump -n -i eth0 -p -s 0 proto \\icmp
 ```
+
+
+### vs code
+
+```
+command + option + arrow <-/->   :) 
+
+```
