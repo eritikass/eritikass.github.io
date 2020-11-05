@@ -2,7 +2,7 @@
 
 ## Work
  - Veriff, `April 2019-...`
- - Tallinna Polütehnikum _(teaching automated testing)_, `2018-...`
+ - Tallinna Polütehnikum _(teaching automated testing)_, `2018-2020`
  - Ekspress Digital(/Delfi), `November 2007-2019 April`
  - Spintek OÜ, `September 2006-November 2007`
 
@@ -15,3 +15,4 @@
  - [Ekspress Digital employee of the year 2017](https://www.facebook.com/eritikass/posts/1633042516755394)
  - [TOEFL iBT](https://www.ets.org/toefl/ibt/about): 94
  - [5sec.fm](https://www.5sec.fm/) - Ajujaht 2015-2016
+ - [pagerr](https://pagerr.net/) - Ajujaht 2019-2020 (winner)
