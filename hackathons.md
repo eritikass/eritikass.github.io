@@ -2,6 +2,8 @@
 
 Hackathons i participated:
 
+ * Veriff internal hackathron, `December 02-04, 2020`
+      - Did run my idea (canary deploys), ended up team with 5 - 1'st place! 
  * [Digital Innovation Days Hackathon](https://www.facebook.com/events/322816275287950/), `November 05-07, 2019`
       - [pagerr](https://pagerr.net/) - print on unused areas `1st place`
  * [TransferWise Hackathon 2019](https://www.facebook.com/events/329284214585465/), `March 29-30, 2019`
